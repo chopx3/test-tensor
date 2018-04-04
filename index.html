@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Калькулятор кредитов</title>
+</head>
+<body>
+    <div class="credit-form">
+        <div class="credit-form__line line">
+            <label  class="line__text">Сумма кредита:</label>
+            <input type="number" class="line__input" value=100000>
+            <span class="line__validity-checker"></span>
+        </div>
+        <div class="credit-form__line line">
+            <label class="line__text">Срок кредита:</label>
+            <input type="number" class="line__input line__input_short" value=36> месяцев
+            <span class="line__validity-checker"></span>
+        </div>
+        <div class="credit-form__line line">
+            <label class="line__text">Процентная ставка:</label>
+            <input type="number" class="line__input line__input_short" value=15> % годовых
+            <span class="line__validity-checker"></span>
+        </div>
+        <div class="credit-form__line line">
+            <label class="line__text">Тип платежей:</label>
+            <select class="line__input">
+                <option value="1">аннуитетный</option>
+                <option value="2">дифференцированный</option>
+            </select>
+            <span class="line__validity-checker"></span>
+        </div>
+        <div class="credit-form__line line">
+            <label class="line__text">Дата первого платежа:</label>
+            <input type="date" class="line__input line__input_short" value="2018-01-01">
+            <span class="line__validity-checker"></span>
+        </div>
+        <div class="credit-form__line line">
+                <label class="line__text"></label>
+                <button class="credit-form__submit line__input_short">Рассчитать</button>
+            </div>
+    </div>
+    <div class="short-info">
+        <div class="line">
+            <div class="line__text line__text_bold">Сумма ежемесячного платежа:</div>
+            <div class="line__text line__text_money">
+                <span class="line__text_bold"></span> руб.
+            </div>
+        </div>
+        <div class="line">
+            <div class="line__text line__text_bold">Переплата по процентам за кредит:</div>
+            <div class="line__text line__text_money"><span class="line__text_bold"></span> руб.</div>
+        </div>
+    </div>
+    <div class="info-table">
+        <table class="table">
+            <thead class="table__thead">
+                <tr class="table__tr">
+                    <th class="table__th">№ Платежа</th>
+                    <th class="table__th">Дата платежа</th>
+                    <th class="table__th">Сумма платежа</th>
+                    <th class="table__th">Основной долг</th>
+                    <th class="table__th">Начисленные проценты</th>
+                    <th class="table__th">Остаток задолженности</th>
+                </tr>
+            </thead>
+            <tbody class="table__body">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
